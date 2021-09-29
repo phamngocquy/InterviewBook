@@ -79,16 +79,16 @@
 
 ### VIN vantix: Data Engineer
 
-### Easy Algorithm:
+##### Easy Algorithm:
 
 * merge two sorted list
 
-#### Big DATA - experience
+##### Big DATA - experience
 
 * Hadoop
 * Minio
 
-#### Behavioral question
+##### Behavioral question
 
 * Build monitoring database system
 
@@ -97,15 +97,10 @@
 #### Linux
 
 * Thread
-    *
 * Process
-    *
 * Difference between thread vs process
-    *
 
 #### Programing Language
 
 * OOP
-    *
 * Compiler vs Interpreter language
-    * 
