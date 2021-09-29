@@ -1,5 +1,15 @@
 * Network:
     * TCP vs UDP
+* OS
+    * Concurrency vs parallel:
+        * Concurrency is about dealing with lots of things at once. Parallelism is about doing lots of things at once.
+        * What will happen if 2 processes read/write to the same file?
+            * The only issue is if you are trying to read a block that the writer is writing at the same time. In that
+              cause, the data you get is unpredictable but you should be able to read. In short, simultaneous reads and
+              write would not, by themselves, cause a program to crash.
+              (edited)
+    * Computer Buffer
+        * https://techterms.com/definition/buffer
 
 ### ByteDance Site Reliability Engineering
 
@@ -32,14 +42,32 @@
 
 #### Database:
 
-* MYSQL:
-    * Indexing:
-        * B-Tree: Algorithm, indexing column, user-case, < > =
-        * Hash: algorithm, use-case, < > =
-        * Hash vs B-Tree
-    * Partitioning:
-        * How DB partition data
-* PostgeSQL:
++ **MYSQL**:
+    + **Indexing**:
+      <details>
+      <summary>B-Tree: Algorithm, indexing column, user-case, < > = </summary>
+
+        + B-Tree is a balanced tree: all branches of the tree have the same length.
+        + [B- tree’s height should lie as low as possible, All the leaf nodes of the B-tree must be at the same level](https://www.geeksforgeeks.org/difference-between-b-tree-and-b-tree/)
+        + How index work in this case: WHERE age = 5 and Where age > 5? The complexity to go to the next record?
+            + [The MySQL optimizer will use the indexes where it thinks it is appropriate to do so](https://stackoverflow.com/questions/6747359/do-indexes-speed-up-greater-than-comparison-in-mysql)
+        + As with other indexes on columns of InnoDB tables, a multi-valued index cannot be created with USING HASH;
+          attempting to do so results in a warning: This storage engine does not support the HASH index algorithm,
+          storage engine default was used instead. (USING BTREE is supported as usual.)
+      </details>
+      <details>
+          <summary>Hash: algorithm, use-case, < > =</summary>
+      </details>
+      <details>
+          <summary>Hash vs B-Tree</summary>
+      </details>
+    + **Partitioning**
+      <details>
+      <summary>How DB partition data</summary>
+
+      </details>
+
+* **PostgeSQL**:
     *
 
 #### Candidate ask interviewer
