@@ -32,6 +32,8 @@
         - data schema optimize: index, partition
     - Scale:
         - Cluster mode
+    - master - slave: synchronous and asynchronous
+        - This guarantees that a failover will not lose any data and that all load-balanced servers will return consistent results no matter which server is queried. In contrast, asynchronous solutions allow some delay between the time of a commit and its propagation to the other servers, opening the possibility that some transactions might be lost in the switch to a backup server, and that load balanced servers might return slightly stale results. Asynchronous communication is used when synchronous would be too slow.
 
 #### Big DATA
 
